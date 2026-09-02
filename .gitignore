@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+setmore-secret-local.json
+*.pem
+*.key
+node_modules/
+.aws-sam/
+samconfig.toml
+coverage/
+dist/
