@@ -10,3 +10,4 @@ node_modules/
 samconfig.toml
 coverage/
 dist/
+*.backup.*

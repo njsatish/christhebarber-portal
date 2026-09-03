@@ -1,1 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;600;700&display=swap');:root{--ink:#111315;--paper:#fbfaf7;--ivory:#f4f0e8;--copper:#c47a45;--line:#d9d5cd}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Manrope,sans-serif}a{color:inherit}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;z-index:99;background:white;padding:1rem}header{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100vw - 1180px)/2));position:sticky;top:0;z-index:20;background:#fbfaf7ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;line-height:1;font:700 1.2rem 'Barlow Condensed'}.brand b{display:grid;place-items:center;width:43px;height:43px;background:var(--ink);color:white}.brand small{display:block;font:600 .62rem Manrope;letter-spacing:.25em;margin-top:.3rem}header nav{display:flex;align-items:center;gap:1.5rem}header nav a,.actions a,.heading>a,.copy>a{font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}#menu{display:none;border:0;background:none;font-weight:800}.btn{display:inline-grid;place-items:center;min-height:48px;padding:.7rem 1.25rem;background:var(--copper);color:white;text-decoration:none!important;text-transform:uppercase;font-size:.74rem;font-weight:800;letter-spacing:.08em}.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:calc(100vh - 78px);background:var(--ink);color:white}.hero>div:first-child{padding:clamp(4rem,8vw,8rem) max(24px,calc((100vw - 1180px)/2));padding-right:5vw;align-self:center}.tag{color:var(--copper);font-size:.7rem;font-weight:800;letter-spacing:.22em}.hero h1,h2{font-family:'Barlow Condensed';line-height:.88;text-transform:uppercase;margin:.6rem 0 1.8rem}.hero h1{font-size:clamp(4rem,8vw,7.7rem)}.hero h1 em{color:var(--copper);font-style:normal}.hero>div>p:not(.tag){max-width:560px;color:#bbb;font-size:1.08rem}.actions{display:flex;gap:1.5rem;align-items:center;margin-top:2rem}.heroimg{background:linear-gradient(140deg,#353a3c,#17191a);display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}.heroimg:before{content:"";position:absolute;width:65%;aspect-ratio:1;border:1px solid #c47a4566;border-radius:50%}.heroimg>span{position:absolute;font:800 clamp(8rem,20vw,20rem) 'Barlow Condensed';color:#ffffff0d}.heroimg p{z-index:1;font:700 1.3rem 'Barlow Condensed';letter-spacing:.08em}.heroimg small{font:400 .65rem Manrope;color:#999}.trust{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);padding:2rem 0;border-bottom:1px solid var(--line)}.trust div{padding:0 2rem;border-right:1px solid var(--line)}.trust div:last-child{border:0}.trust b,.trust small{display:block}.trust b{font:700 1.1rem 'Barlow Condensed'}.section{max-width:1180px;margin:auto;padding:clamp(5rem,9vw,8rem) 24px}.two{display:grid;grid-template-columns:1fr 1fr;gap:7vw}.section h2,.booksection h2,.cta h2{font-size:clamp(3.3rem,6vw,6rem)}.copy{font-size:1.08rem}.copy p:first-child{font-size:1.25rem}.heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:2rem}.heading h2{margin-bottom:0}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.gallery figure{margin:0}.gallery .wide{grid-column:span 2;grid-row:span 2}.gallery figure div{min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(140deg,#3b4042,#17191a);color:#ffffff24;font:800 5rem 'Barlow Condensed';border:1px solid #444}.gallery .wide div{min-height:570px}.gallery small{font:400 .7rem Manrope;color:#aaa}.gallery figcaption{font:700 1rem 'Barlow Condensed';margin-top:.5rem}.note{color:#777;font-size:.75rem}.booksection{background:var(--ink);color:white;padding:clamp(5rem,9vw,8rem) max(24px,calc((100vw - 1180px)/2));display:grid;grid-template-columns:1fr 1fr;gap:8vw}.booksection>div>p:not(.tag),.booksection li p{color:#aaa}.light{background:var(--ivory);color:var(--ink);margin-top:1rem}.booksection ol{list-style:none;margin:0;padding:0}.booksection li{display:grid;grid-template-columns:50px 1fr;gap:1rem;padding:1.4rem 0;border-bottom:1px solid #ffffff24}.booksection li>span{color:var(--copper)}.booksection li b{font:700 1.45rem 'Barlow Condensed'}.booksection li p{margin:0}.map{min-height:500px;display:grid;place-items:center;background:repeating-linear-gradient(35deg,#ddd8cf 0 60px,#eeeae2 61px 68px);font:800 3rem 'Barlow Condensed';color:white;text-shadow:0 2px 8px #555;background-color:#ddd}.two address{font-style:normal;font-size:1.25rem}.links{display:flex;flex-direction:column;margin-top:2rem}.links a{display:flex;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--line);font-size:.75rem;font-weight:800;text-decoration:none}.cta{text-align:center;background:var(--ivory);padding:8rem 24px}.cta h2{font-size:clamp(3.5rem,8vw,8rem)}footer{background:var(--ink);color:#aaa;padding:4rem max(24px,calc((100vw - 1180px)/2));display:flex;justify-content:space-between}.mobile{display:none}@media(max-width:820px){body{padding-bottom:64px}header{height:68px;padding:0 18px}#menu{display:block}header nav{display:none;position:fixed;inset:68px 0 0;background:var(--paper);padding:2rem;flex-direction:column;align-items:stretch}header nav.open{display:flex}header nav a{padding:1rem;border-bottom:1px solid var(--line)}.hero,.two,.booksection{grid-template-columns:1fr}.hero>div:first-child{padding:4rem 24px}.hero h1{font-size:clamp(3.8rem,17vw,6rem)}.heroimg{min-height:440px}.trust{grid-template-columns:1fr 1fr;padding:1rem}.trust div{padding:1rem}.gallery{grid-template-columns:1fr 1fr}.gallery .wide{grid-column:span 2}.gallery .wide div{min-height:420px}.gallery figure div{min-height:210px}.heading{align-items:start;flex-direction:column}.map{min-height:350px}.actions{align-items:flex-start;flex-direction:column}footer{display:block}.mobile{display:grid;grid-template-columns:1fr 1fr 1.35fr;position:fixed;bottom:0;left:0;right:0;height:64px;background:var(--ivory);z-index:50;border-top:1px solid var(--line)}.mobile a{display:grid;place-items:center;text-decoration:none;font-size:.67rem;font-weight:800;border-right:1px solid var(--line)}.mobile a:last-child{background:var(--copper);color:white}}
+
+/* Chris reviews and business hours */
+
+.reviews-section {
+  border-top: 1px solid var(--line);
+}
+
+.reviews-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.reviews-heading h2 {
+  margin-bottom: 0;
+}
+
+.reviews-all-link {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-underline-offset: 5px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--ivory);
+  border-top: 4px solid var(--copper);
+}
+
+.review-stars {
+  color: var(--copper);
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+}
+
+.review-card blockquote {
+  flex: 1;
+  margin: 1.5rem 0 2rem;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.review-card footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.review-card footer strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.review-card footer span {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.business-hours {
+  margin-top: 2rem;
+}
+
+.hours-list {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.hours-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.hours-list dt {
+  font-weight: 700;
+}
+
+.hours-list dd {
+  margin: 0;
+  color: var(--muted);
+  text-align: right;
+}
+
+.hours-list div:nth-child(4) dd,
+.hours-list div:nth-child(5) dd,
+.hours-list div:nth-child(6) dd {
+  color: var(--copper);
+  font-weight: 800;
+}
+
+.hours-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 850px) {
+  .reviews-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    min-height: auto;
+  }
+}

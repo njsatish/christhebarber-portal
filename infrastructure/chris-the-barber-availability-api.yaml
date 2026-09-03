@@ -1,0 +1,116 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Public read-only availability API for Chris the Barber. No booking mutations or customer data.
+Parameters:
+  ArtifactBucket: {Type: String}
+  ArtifactKey: {Type: String}
+  CodeSha256: {Type: String}
+  AllowedOrigin:
+    Type: String
+    Default: https://christhebarber.denduluru.com
+  LogRetentionDays:
+    Type: Number
+    Default: 14
+    AllowedValues: [7, 14, 30, 60, 90]
+Resources:
+  AvailabilityLogGroup:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: /aws/lambda/chris-the-barber-prod-availability
+      RetentionInDays: !Ref LogRetentionDays
+  AvailabilityRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: chris-the-barber-prod-availability-role
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: {Service: lambda.amazonaws.com}
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: WriteOwnLogs
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents]
+                Resource: !Sub '${AvailabilityLogGroup.Arn}:*'
+  AvailabilityFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: AvailabilityLogGroup
+    Properties:
+      FunctionName: chris-the-barber-prod-availability
+      Description: Read-only availability lookup with Setmore-hosted final booking.
+      Runtime: nodejs22.x
+      Architectures: [arm64]
+      Handler: index.handler
+      MemorySize: 256
+      Timeout: 20
+      Role: !GetAtt AvailabilityRole.Arn
+      Code: {S3Bucket: !Ref ArtifactBucket, S3Key: !Ref ArtifactKey}
+      Environment:
+        Variables:
+          ALLOWED_ORIGIN: !Ref AllowedOrigin
+          CODE_SHA256: !Ref CodeSha256
+      LoggingConfig: {LogFormat: JSON, ApplicationLogLevel: INFO, SystemLogLevel: WARN}
+  AvailabilityApi:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Name: chris-the-barber-availability-api
+      ProtocolType: HTTP
+      Description: Read-only availability API. No customer data or booking mutations.
+      CorsConfiguration:
+        AllowOrigins: [!Ref AllowedOrigin]
+        AllowMethods: [POST, OPTIONS]
+        AllowHeaders: [content-type]
+        MaxAge: 300
+  AvailabilityIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref AvailabilityApi
+      IntegrationType: AWS_PROXY
+      IntegrationUri: !GetAtt AvailabilityFunction.Arn
+      PayloadFormatVersion: '2.0'
+      TimeoutInMillis: 20000
+  AvailabilityRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref AvailabilityApi
+      RouteKey: POST /api/v1/availability
+      Target: !Sub 'integrations/${AvailabilityIntegration}'
+  AvailabilityStage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      ApiId: !Ref AvailabilityApi
+      StageName: '$default'
+      AutoDeploy: true
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 10
+        ThrottlingRateLimit: 5
+  InvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref AvailabilityFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub 'arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${AvailabilityApi}/*/POST/api/v1/availability'
+  ErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: chris-the-barber-prod-availability-errors
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions: [{Name: FunctionName, Value: !Ref AvailabilityFunction}]
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 3
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+Outputs:
+  ApiEndpoint: {Value: !GetAtt AvailabilityApi.ApiEndpoint}
+  AvailabilityEndpoint: {Value: !Sub '${AvailabilityApi.ApiEndpoint}/api/v1/availability'}
+  FunctionName: {Value: !Ref AvailabilityFunction}
+  PublicLambdaUrl: {Value: NONE}
