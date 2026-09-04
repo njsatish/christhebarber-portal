@@ -2,7 +2,7 @@
   const API_ENDPOINT = "https://pjw8t599rb.execute-api.us-east-1.amazonaws.com/api/v1/availability";
   const SERVICE_ID = "s5fcf71d64953606227d3e7740166772d785cdf32";
   const STAFF_ID = "r99f585095ff06863ec494873de9023fdf26d353f";
-  const MAX_FUTURE_DAYS = 60;
+  const MAX_FUTURE_DAYS = 30;
   const root = document.querySelector("[data-availability-calendar]");
   if (!root) return;
 
@@ -35,14 +35,19 @@
   }
   function buildBookingUrl(ms){ const u=new URL("https://christhebarber.setmore.com/book");u.searchParams.set("step","user-details");u.searchParams.set("products",SERVICE_ID);u.searchParams.set("type","service");u.searchParams.set("staff",STAFF_ID);u.searchParams.set("slot",ms);u.searchParams.set("staffSelected","true");return u.toString(); }
   function groupSlots(){ return state.slots.reduce((m,s)=>{(m[s.date]??=[]).push(s);return m;},{}); }
+  function visibleDayCount(){
+    const today=startOfDay(new Date());
+    const offset=Math.round((startOfDay(state.rangeStart)-today)/86400000);
+    return Math.max(0,Math.min(7,MAX_FUTURE_DAYS-offset+1));
+  }
   function renderDates(){
     const grouped=groupSlots(); refs.dateStrip.replaceChildren();
-    for(let i=0;i<7;i++){ const d=addDays(state.rangeStart,i), key=iso(d), count=(grouped[key]||[]).length;
+    for(let i=0;i<visibleDayCount();i++){ const d=addDays(state.rangeStart,i), key=iso(d), count=(grouped[key]||[]).length;
       const b=document.createElement("button");b.type="button";b.className=`date-button${state.selectedDate===key?" is-selected":""}${count?"":" no-slots"}`;b.setAttribute("role","listitem");b.setAttribute("aria-pressed",String(state.selectedDate===key));
       b.innerHTML=`<span>${displayDate(d,{weekday:"short"})}</span><strong>${d.getDate()}</strong><small>${count?`${count} time${count===1?"":"s"}`:"No times"}</small>`;
       b.addEventListener("click",()=>selectDate(key));refs.dateStrip.appendChild(b);
     }
-    const end=addDays(state.rangeStart,6);refs.rangeLabel.textContent=`${displayDate(state.rangeStart,{month:"short",day:"numeric"})} – ${displayDate(end,{month:"short",day:"numeric"})}`;
+    const end=addDays(state.rangeStart,visibleDayCount()-1);refs.rangeLabel.textContent=`${displayDate(state.rangeStart,{month:"short",day:"numeric"})} – ${displayDate(end,{month:"short",day:"numeric"})}`;
     refs.prev.disabled=state.rangeStart<=startOfDay(new Date());refs.next.disabled=addDays(state.rangeStart,7)>addDays(startOfDay(new Date()),MAX_FUTURE_DAYS);
   }
   function selectDate(key) {
@@ -64,7 +69,7 @@
   function selectSlot(slot,button){ state.selectedSlot=slot;refs.slotGrid.querySelectorAll("button").forEach(b=>b.classList.remove("is-selected"));button.classList.add("is-selected");button.setAttribute("aria-pressed","true");refs.summaryDate.textContent=slot.dateLabel;refs.summaryTime.textContent=slot.timeLabel;refs.summary.hidden=false;refs.summary.scrollIntoView({behavior:"smooth",block:"nearest"}); }
   async function loadRange(){
     if(state.loading)return;state.loading=true;state.selectedDate=null;state.selectedSlot=null;refs.summary.hidden=true;refs.slotPanel.hidden=true;renderDates();setStatus("Checking Chris's latest availability…","is-loading");
-    const start=iso(state.rangeStart),end=iso(addDays(state.rangeStart,6));
+    const count=visibleDayCount();if(count<1){setStatus("The 30-day booking window has ended.");state.loading=false;return;}const start=iso(state.rangeStart),end=iso(addDays(state.rangeStart,count-1));
     try{ const c=new AbortController(),timer=setTimeout(()=>c.abort(),15000);const r=await fetch(API_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({startDate:start,endDate:end}),signal:c.signal});clearTimeout(timer);const data=await r.json();if(!r.ok)throw new Error(data.error||`HTTP_${r.status}`);state.slots=Array.isArray(data.slots)?data.slots:[];renderDates();
       const first=state.slots[0]?.date;if(first){selectDate(first);}else{setStatus("No openings were found in this seven-day period. Try the next week or check Setmore directly.");}
     }catch(e){console.error("Availability request failed",e);state.slots=[];renderDates();setStatus("Live availability is temporarily unavailable. Please check current times directly on Setmore.","is-error");}
