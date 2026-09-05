@@ -376,6 +376,372 @@
 }
 </style>
 <!-- EXACT_NATIVE_MENU_COLORS_END -->
+
+<!-- DEFINITIVE_BOOKING_COPY_BLACK_START -->
+<style>
+@media screen {
+  /*
+    Force every supporting text element in the left side of #booking to use
+    dark text. This overrides inherited opacity, color, and Safari text fill.
+  */
+  #booking > div:first-child,
+  #booking > div:first-child *,
+  #booking .booking-copy,
+  #booking .booking-copy *,
+  #booking .availability-copy,
+  #booking .availability-copy *,
+  #booking .booking-section-copy,
+  #booking .booking-section-copy * {
+    opacity: 1 !important;
+  }
+
+  #booking > div:first-child p,
+  #booking > div:first-child li,
+  #booking > div:first-child li span,
+  #booking .booking-copy p,
+  #booking .booking-copy li,
+  #booking .booking-copy li span,
+  #booking .availability-copy p,
+  #booking .availability-copy li,
+  #booking .availability-copy li span,
+  #booking .booking-section-copy p,
+  #booking .booking-section-copy li,
+  #booking .booking-section-copy li span {
+    color: #272b2a !important;
+    -webkit-text-fill-color: #272b2a !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  /* Keep the primary heading fully black. */
+  #booking > div:first-child h1,
+  #booking > div:first-child h2,
+  #booking .booking-copy h1,
+  #booking .booking-copy h2,
+  #booking .availability-copy h1,
+  #booking .availability-copy h2 {
+    color: #111315 !important;
+    -webkit-text-fill-color: #111315 !important;
+    opacity: 1 !important;
+  }
+
+  /* Keep Live Availability and checklist marks copper. */
+  #booking > div:first-child .tag,
+  #booking > div:first-child [class*="eyebrow"],
+  #booking .booking-copy .tag,
+  #booking .availability-copy .tag {
+    color: #c9793f !important;
+    -webkit-text-fill-color: #c9793f !important;
+    opacity: 1 !important;
+  }
+
+  #booking > div:first-child li::before,
+  #booking .booking-copy li::before,
+  #booking .availability-copy li::before,
+  #booking .booking-section-copy li::before {
+    color: #c9793f !important;
+    -webkit-text-fill-color: #c9793f !important;
+    opacity: 1 !important;
+  }
+}
+</style>
+<!-- DEFINITIVE_BOOKING_COPY_BLACK_END -->
+<!-- CHOOSE_TIME_COPY_CONTRAST_START -->
+<style>
+  #booking .choose-time-copy-fixed,
+  #booking .choose-time-copy-fixed * {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  #booking .choose-time-copy-fixed h1,
+  #booking .choose-time-copy-fixed h2,
+  #booking .choose-time-copy-fixed h3 {
+    color: #111315 !important;
+    -webkit-text-fill-color: #111315 !important;
+  }
+
+  #booking .choose-time-copy-fixed > p,
+  #booking .choose-time-copy-fixed p,
+  #booking .choose-time-copy-fixed li,
+  #booking .choose-time-copy-fixed li span {
+    color: #272b2a !important;
+    -webkit-text-fill-color: #272b2a !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+  }
+
+  #booking .choose-time-copy-fixed .tag,
+  #booking .choose-time-copy-fixed [class*="eyebrow"] {
+    color: #c9793f !important;
+    -webkit-text-fill-color: #c9793f !important;
+    font-weight: 800 !important;
+  }
+
+  #booking .choose-time-copy-fixed li::before {
+    color: #c9793f !important;
+    -webkit-text-fill-color: #c9793f !important;
+    opacity: 1 !important;
+  }
+</style>
+<!-- CHOOSE_TIME_COPY_CONTRAST_END -->
+<!-- CHOOSE_TIME_POLICY_REMINDERS_STYLE_START -->
+<style>
+  #booking .choose-time-policy-reminders {
+    display: grid !important;
+    gap: .75rem !important;
+    margin-top: 1.4rem !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  #booking .choose-time-policy-reminders li {
+    position: relative !important;
+    margin: 0 !important;
+    padding-left: 1.35rem !important;
+    color: #272b2a !important;
+    -webkit-text-fill-color: #272b2a !important;
+    font-size: .9rem !important;
+    font-weight: 650 !important;
+    line-height: 1.4 !important;
+    opacity: 1 !important;
+  }
+
+  #booking .choose-time-policy-reminders li::before {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    color: #c9793f !important;
+    -webkit-text-fill-color: #c9793f !important;
+    content: "✓" !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+  }
+</style>
+<!-- CHOOSE_TIME_POLICY_REMINDERS_STYLE_END -->
+<!-- COMPACT_BOOKING_TERMS_STYLE_START -->
+<style>
+  #booking .compact-booking-terms {
+    max-width: 620px;
+    margin-top: 1.15rem;
+    border-top: 1px solid #c9c1b6;
+    border-bottom: 1px solid #c9c1b6;
+  }
+
+  #booking .compact-booking-terms summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 48px;
+    padding: .75rem 0;
+    color: #111315;
+    -webkit-text-fill-color: #111315;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  #booking .compact-booking-terms summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #booking .compact-booking-terms summary::after {
+    color: #c9793f;
+    content: "+";
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  #booking .compact-booking-terms[open] summary::after {
+    content: "−";
+  }
+
+  #booking .compact-booking-terms-content {
+    display: grid;
+    gap: .85rem;
+    padding: .25rem 0 1.15rem;
+  }
+
+  #booking .compact-booking-terms-content article {
+    display: grid;
+    grid-template-columns: minmax(145px, .35fr) minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  #booking .compact-booking-terms-content h3 {
+    margin: 0;
+    color: #111315;
+    -webkit-text-fill-color: #111315;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: .98rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  #booking .compact-booking-terms-content p {
+    margin: 0;
+    color: #3f4442;
+    -webkit-text-fill-color: #3f4442;
+    font-size: .78rem;
+    font-weight: 500;
+    line-height: 1.5;
+    opacity: 1;
+  }
+
+  @media (max-width: 620px) {
+    #booking .compact-booking-terms-content article {
+      grid-template-columns: 1fr;
+      gap: .25rem;
+    }
+  }
+</style>
+<!-- COMPACT_BOOKING_TERMS_STYLE_END -->
+
+
+<!-- BOOKING_WEEK_MENU_DEFINITIVE_START -->
+<style>
+@media (max-width: 950px) {
+  body.cfm-booking-page,
+  body.cfm-booking-page main {
+    overflow-x: hidden !important;
+  }
+
+  /* Header and trigger always remain above the opened menu. */
+  body.cfm-booking-page header:has(.cfm-native-menu),
+  body.cfm-booking-page .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50000 !important;
+    overflow: visible !important;
+    isolation: isolate !important;
+  }
+
+  body.cfm-booking-page .cfm-native-menu {
+    position: relative !important;
+    z-index: 50002 !important;
+    display: block !important;
+    pointer-events: auto !important;
+  }
+
+  body.cfm-booking-page .cfm-native-menu > summary,
+  body.cfm-booking-page .cfm-native-menu[open] > summary {
+    position: relative !important;
+    z-index: 50004 !important;
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+
+  /* Closed panel is hidden. Open panel is explicitly visible. */
+  body.cfm-booking-page .cfm-native-menu-panel {
+    display: none !important;
+  }
+
+  body.cfm-booking-page .cfm-native-menu[open] > .cfm-native-menu-panel {
+    position: fixed !important;
+    z-index: 50001 !important;
+    top: var(--booking-menu-top, 112px) !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100vw !important;
+    height: calc(100dvh - var(--booking-menu-top, 112px)) !important;
+    padding: 1.2rem 20px max(2rem, env(safe-area-inset-bottom)) !important;
+    overflow-y: auto !important;
+    background: #f7f4ee !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  body.cfm-booking-page .cfm-native-menu[open] > .cfm-native-menu-panel > a {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Full seven-day week visible at once. */
+  #booking .booking-week-seven-fixed {
+    display: grid !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    gap: 4px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    touch-action: auto !important;
+  }
+
+  #booking .booking-week-seven-fixed > * {
+    min-width: 0 !important;
+    width: auto !important;
+    min-height: 104px !important;
+    padding: 10px 2px !important;
+    overflow: hidden !important;
+  }
+
+  #booking .booking-week-seven-fixed > * * {
+    max-width: 100% !important;
+  }
+
+  #booking .booking-week-seven-fixed button,
+  #booking .booking-week-seven-fixed [role="button"] {
+    min-width: 0 !important;
+    width: 100% !important;
+    min-height: 104px !important;
+    padding: 9px 1px !important;
+    overflow: hidden !important;
+  }
+
+  #booking .booking-week-seven-fixed button > *,
+  #booking .booking-week-seven-fixed [role="button"] > * {
+    white-space: nowrap !important;
+  }
+
+  #booking .booking-week-seven-fixed .booking-week-day-name {
+    font-size: clamp(.56rem, 2.7vw, .72rem) !important;
+    letter-spacing: .04em !important;
+  }
+
+  #booking .booking-week-seven-fixed .booking-week-date-number {
+    font-size: clamp(1.35rem, 6vw, 2rem) !important;
+    line-height: 1 !important;
+  }
+
+  #booking .booking-week-seven-fixed .booking-week-count {
+    font-size: clamp(.48rem, 2.25vw, .65rem) !important;
+    line-height: 1.15 !important;
+  }
+
+  #booking .booking-date-scroll-hint {
+    display: none !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #booking .booking-week-seven-fixed {
+    gap: 2px !important;
+  }
+
+  #booking .booking-week-seven-fixed > *,
+  #booking .booking-week-seven-fixed button,
+  #booking .booking-week-seven-fixed [role="button"] {
+    min-height: 96px !important;
+  }
+}
+</style>
+<!-- BOOKING_WEEK_MENU_DEFINITIVE_END -->
 </head>
 <body class="cfm-booking-page" id="top">
 <a class="skip" href="#main">Skip to content</a>
@@ -402,9 +768,19 @@
       <a href="/booking.html" data-cfm-page="book" data-cfm-selected="true" aria-current="page">Book Now</a>
     </nav></header>
 <main id="main">
-<section class="multipage-hero"><p class="tag">Appointments</p><h1>Choose Your Time.</h1><p>View live availability, select an opening, and complete the required deposit securely through Setmore.</p></section>
+<!-- BOOKING_COMPACT_INTRO_START -->
+<section class="booking-compact-intro" aria-labelledby="booking-page-title">
+  <p class="tag">Appointments</p>
+  <h1 id="booking-page-title">Book Your Appointment.</h1>
+  <p>
+    Review the booking requirements, then browse current availability
+    for the next 30 days.
+  </p>
+</section>
+<!-- BOOKING_COMPACT_INTRO_END -->
+<!-- BOOKING_CALENDAR_AFTER_POLICY_START -->
 <section class="availability-section" id="booking" aria-labelledby="availability-title">
-  <div class="availability-shell">
+<div class="availability-shell">
     <div class="availability-intro">
       <p class="tag">LIVE AVAILABILITY</p>
       <h2 id="availability-title">CHOOSE YOUR TIME.</h2>
@@ -463,46 +839,13 @@
     </div>
   </div>
 </section>
+<!-- BOOKING_CALENDAR_AFTER_POLICY_END -->
+<!-- BOOKING_CALENDAR_AFTER_POLICY_START -->
 
+<!-- BOOKING_CALENDAR_AFTER_POLICY_END -->
+<!-- BOOKING_CALENDAR_AFTER_POLICY_START -->
 
-<!-- BOOKING_POLICY_EMBED_START -->
-<section class="section booking-policy-clean" id="booking-policy" aria-labelledby="booking-policy-title">
-  <div class="booking-policy-clean-heading">
-    <p class="tag">BEFORE YOU BOOK</p>
-    <h2 id="booking-policy-title">OUR BOOKING POLICY.</h2>
-  </div>
-
-  <div class="booking-policy-clean-list">
-    <article class="booking-policy-clean-item">
-      <h3>Deposit Required</h3>
-      <p>
-        A deposit is required for all appointments. Your appointment is not
-        confirmed until the required booking steps are completed through Setmore.
-      </p>
-    </article>
-
-    <article class="booking-policy-clean-item">
-      <h3>Pricing Is Based on Time</h3>
-      <p>
-        Pricing is based on the amount of time reserved, ensuring every client
-        receives focused, quality attention for their individual needs.
-      </p>
-    </article>
-
-    <article class="booking-policy-clean-item">
-      <h3>Cancellation Policy</h3>
-      <p>
-        Appointments may be canceled or rescheduled up to 24 hours before the
-        scheduled appointment time.
-      </p>
-    </article>
-  </div>
-
-  <p class="booking-policy-clean-tagline">
-    Success Favors the Well Groomed.
-  </p>
-</section>
-<!-- BOOKING_POLICY_EMBED_END -->
+<!-- BOOKING_CALENDAR_AFTER_POLICY_END -->
 </main>
 <!-- COMMON_FOOTER_START -->
 <footer class="site-footer site-footer-compact" aria-labelledby="footer-brand-title">
@@ -622,5 +965,232 @@
 })();
 </script>
 <!-- BOOKING_LEGACY_BAR_GUARD_END -->
+<!-- CHOOSE_TIME_COPY_TARGET_START -->
+<script>
+(function () {
+  var booking = document.getElementById('booking');
+  if (!booking) return;
+
+  var headings = Array.from(booking.querySelectorAll('h1, h2, h3'));
+  var heading = headings.find(function (element) {
+    return (element.textContent || '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toUpperCase()
+      .replace(/\.$/, '') === 'CHOOSE YOUR TIME';
+  });
+  if (!heading) return;
+
+  var container = heading.parentElement;
+  while (container && container !== booking) {
+    var hasParagraph = Boolean(container.querySelector('p'));
+    var hasList = Boolean(container.querySelector('ul, ol'));
+    var containsCalendar = Boolean(container.querySelector('[data-availability-calendar]'));
+    if (hasParagraph && hasList && !containsCalendar) break;
+    container = container.parentElement;
+  }
+
+  if (container && container !== booking) {
+    container.classList.add('choose-time-copy-fixed');
+  }
+})();
+</script>
+<!-- CHOOSE_TIME_COPY_TARGET_END -->
+<!-- CHOOSE_TIME_POLICY_REMINDERS_START -->
+<script>
+(function () {
+  var booking = document.getElementById('booking');
+  if (!booking) return;
+
+  var headings = Array.from(booking.querySelectorAll('h1, h2, h3'));
+  var heading = headings.find(function (element) {
+    return (element.textContent || '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toUpperCase()
+      .replace(/\.$/, '') === 'CHOOSE YOUR TIME';
+  });
+  if (!heading) return;
+
+  var container = heading.parentElement;
+  while (container && container !== booking) {
+    var list = container.querySelector('ul, ol');
+    var calendar = container.querySelector('[data-availability-calendar]');
+    if (list && !calendar) break;
+    container = container.parentElement;
+  }
+  if (!container || container === booking) return;
+
+  var list = container.querySelector('ul, ol');
+  if (!list) return;
+
+  list.classList.add('choose-time-policy-reminders');
+  list.innerHTML = [
+    '<li>Deposit required for confirmation</li>',
+    '<li>Pricing is based on reserved time</li>',
+    '<li>Cancel or reschedule up to 24 hours before</li>'
+  ].join('');
+})();
+</script>
+<!-- CHOOSE_TIME_POLICY_REMINDERS_END -->
+<!-- COMPACT_BOOKING_TERMS_START -->
+<script>
+(function () {
+  var booking = document.getElementById('booking');
+  if (!booking) return;
+
+  var headings = Array.from(booking.querySelectorAll('h1, h2, h3'));
+  var heading = headings.find(function (element) {
+    return (element.textContent || '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toUpperCase()
+      .replace(/\.$/, '') === 'CHOOSE YOUR TIME';
+  });
+  if (!heading) return;
+
+  var container = heading.parentElement;
+  while (container && container !== booking) {
+    var list = container.querySelector('ul, ol');
+    var calendar = container.querySelector('[data-availability-calendar]');
+    if (list && !calendar) break;
+    container = container.parentElement;
+  }
+  if (!container || container === booking) return;
+
+  container.querySelector('.compact-booking-terms')?.remove();
+
+  var list = container.querySelector('ul, ol');
+  if (list) {
+    list.classList.add('choose-time-policy-reminders');
+    list.innerHTML = [
+      '<li>Deposit required for confirmation</li>',
+      '<li>Pricing is based on reserved time</li>',
+      '<li>Cancel or reschedule up to 24 hours before</li>'
+    ].join('');
+  }
+
+  var details = document.createElement('details');
+  details.className = 'compact-booking-terms';
+  details.innerHTML = [
+    '<summary>View complete booking terms</summary>',
+    '<div class="compact-booking-terms-content">',
+      '<article><h3>Deposit Required</h3><p>A deposit is required for all appointments. Your appointment is not confirmed until the required booking steps are completed through Setmore.</p></article>',
+      '<article><h3>Pricing Is Based on Time</h3><p>Pricing reflects the amount of time reserved, ensuring focused attention for the selected service.</p></article>',
+      '<article><h3>Cancellation Policy</h3><p>Appointments may be canceled or rescheduled up to 24 hours before the scheduled appointment time.</p></article>',
+    '</div>'
+  ].join('');
+
+  if (list) {
+    list.insertAdjacentElement('afterend', details);
+  } else {
+    container.appendChild(details);
+  }
+})();
+</script>
+<!-- COMPACT_BOOKING_TERMS_END -->
+
+
+<!-- BOOKING_WEEK_MENU_RUNTIME_START -->
+<script>
+(function () {
+  function normalize(value) {
+    return (value || '').replace(/\s+/g, ' ').trim().toUpperCase();
+  }
+
+  function fixMenu() {
+    var menu = document.querySelector('.cfm-native-menu');
+    var header = menu && menu.closest('header');
+    if (!menu || !header) return;
+
+    document.body.classList.add('cfm-booking-page');
+
+    function updateHeaderHeight() {
+      var height = Math.ceil(header.getBoundingClientRect().height);
+      document.documentElement.style.setProperty('--booking-menu-top', height + 'px');
+    }
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight, { passive: true });
+
+    var summary = menu.querySelector(':scope > summary');
+    var panel = menu.querySelector(':scope > .cfm-native-menu-panel');
+    if (!summary || !panel) return;
+
+    summary.hidden = false;
+    summary.removeAttribute('disabled');
+    summary.setAttribute('aria-disabled', 'false');
+    summary.style.pointerEvents = 'auto';
+
+    menu.addEventListener('toggle', function () {
+      updateHeaderHeight();
+      summary.style.pointerEvents = 'auto';
+      summary.style.visibility = 'visible';
+      summary.style.opacity = '1';
+      summary.setAttribute('aria-expanded', menu.open ? 'true' : 'false');
+      panel.setAttribute('aria-hidden', menu.open ? 'false' : 'true');
+    });
+  }
+
+  function findWeekRow(calendar) {
+    var heading = Array.from(calendar.querySelectorAll('h1,h2,h3,h4,p,span')).find(function (node) {
+      return normalize(node.textContent) === 'CHOOSE A DATE';
+    });
+    if (!heading) return null;
+
+    var candidates = [];
+    var node = heading.parentElement;
+    for (var depth = 0; node && node !== calendar && depth < 7; depth += 1, node = node.parentElement) {
+      Array.from(node.children).forEach(function (child) {
+        var controls = Array.from(child.querySelectorAll('button,[role="button"]')).filter(function (control) {
+          var value = normalize(control.textContent);
+          return /^(SUN|MON|TUE|WED|THU|FRI|SAT)\b/.test(value);
+        });
+        if (controls.length >= 4 && controls.length <= 7) {
+          candidates.push({ node: child, count: controls.length });
+        }
+      });
+    }
+
+    candidates.sort(function (a, b) { return b.count - a.count; });
+    return candidates.length ? candidates[0].node : null;
+  }
+
+  function labelWeekCards(row) {
+    Array.from(row.querySelectorAll('button,[role="button"]')).forEach(function (card) {
+      var children = Array.from(card.children);
+      if (children.length >= 1) children[0].classList.add('booking-week-day-name');
+      if (children.length >= 2) children[1].classList.add('booking-week-date-number');
+      if (children.length >= 3) children[2].classList.add('booking-week-count');
+    });
+  }
+
+  function fixCalendar() {
+    var calendar = document.querySelector('[data-availability-calendar]');
+    if (!calendar) return;
+
+    var row = findWeekRow(calendar);
+    if (!row) return;
+
+    row.classList.remove('booking-date-strip-fixed');
+    row.classList.add('booking-week-seven-fixed');
+    labelWeekCards(row);
+  }
+
+  function apply() {
+    fixMenu();
+    fixCalendar();
+  }
+
+  apply();
+  document.addEventListener('DOMContentLoaded', apply, { once: true });
+
+  var calendar = document.querySelector('[data-availability-calendar]');
+  if (calendar) {
+    new MutationObserver(fixCalendar).observe(calendar, { childList: true, subtree: true });
+  }
+})();
+</script>
+<!-- BOOKING_WEEK_MENU_RUNTIME_END -->
 </body>
 </html>

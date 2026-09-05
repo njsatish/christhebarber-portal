@@ -1662,3 +1662,1554 @@ html body .site-header nav.cfm-primary-nav a.book-now.cfm-nav-selected {
     background: #111315 !important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+/* FINAL SIMPLE HERO LOGO FRAME START */
+.sftwg-t04-brand-panel {
+  overflow: hidden !important;
+}
+
+.sftwg-t04-logo-card {
+  position: relative !important;
+  width: min(92%, 680px) !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+  background: #ece9e3 !important;
+  border: 1px solid #989286 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.sftwg-t04-logo-card::before,
+.sftwg-t04-logo-card::after,
+.sftwg-t04-brand-panel::before,
+.sftwg-t04-brand-panel::after,
+.sftwg-t04-logo-card .hero-logo-corner {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  content: none !important;
+}
+
+.sftwg-t04-logo-card img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #000 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 650px) {
+  .sftwg-t04-logo-card {
+    width: 94% !important;
+    padding: 8px !important;
+  }
+}
+/* FINAL SIMPLE HERO LOGO FRAME END */
+
+/* WIDE VIEWPORT HERO BOUNDARY START */
+/*
+  Keep the complete hero inside the same centered visual frame at normal
+  browser size, ultrawide viewports, and reduced browser zoom levels.
+*/
+.sftwg-t04-hero {
+  width: calc(100% - 32px) !important;
+  max-width: 1644px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  overflow: clip !important;
+  box-sizing: border-box !important;
+}
+
+.sftwg-t04-top,
+.sftwg-t04-copy,
+.sftwg-t04-brand-panel,
+.sftwg-t04-logo-card,
+.sftwg-t04-highlights {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.sftwg-t04-top {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.sftwg-t04-copy,
+.sftwg-t04-brand-panel {
+  overflow: hidden !important;
+}
+
+.sftwg-t04-logo-card {
+  width: min(90%, 650px) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.sftwg-t04-logo-card img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.sftwg-t04-highlights {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* At very wide effective viewports, created by zooming out, retain breathing room. */
+@media (min-width: 2200px) {
+  .sftwg-t04-hero {
+    width: min(calc(100% - 96px), 1644px) !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .sftwg-t04-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@supports not (overflow: clip) {
+  .sftwg-t04-hero {
+    overflow: hidden !important;
+  }
+}
+/* WIDE VIEWPORT HERO BOUNDARY END */
+
+/* HERO LOGO 80 PERCENT PANEL START */
+@media (min-width: 951px) {
+  .sftwg-t04-brand-panel {
+    position: relative !important;
+    display: grid !important;
+    place-items: center !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /*
+    80% width and 80% height leaves approximately 10% orange space
+    on each side of the centered frame.
+  */
+  .sftwg-t04-logo-card {
+    width: 80% !important;
+    height: 80% !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: clamp(8px, .7vw, 12px) !important;
+    display: grid !important;
+    place-items: center !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    background: #ece9e3 !important;
+    border: 1px solid #989286 !important;
+    box-shadow: none !important;
+  }
+
+  .sftwg-t04-logo-card img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #000 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+
+@media (max-width: 950px) {
+  /* Keep the existing responsive stacked treatment on tablets and phones. */
+  .sftwg-t04-brand-panel {
+    padding: clamp(2rem, 6vw, 4rem) !important;
+  }
+
+  .sftwg-t04-logo-card {
+    width: min(92%, 680px) !important;
+    height: auto !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
+  }
+
+  .sftwg-t04-logo-card img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+/* HERO LOGO 80 PERCENT PANEL END */
+
+/* ABOUT SERVICE DETAIL START */
+.about-service-detail {
+  max-width: 1644px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 6rem);
+  overflow: hidden;
+  background: #111315;
+  color: #fff;
+}
+
+.about-service-layout {
+  display: grid;
+  grid-template-columns: minmax(430px, .94fr) minmax(560px, 1.06fr);
+  gap: clamp(3rem, 5.5vw, 6rem);
+  align-items: stretch;
+}
+
+.about-service-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 640px;
+  min-width: 0;
+}
+
+.about-service-eyebrow {
+  margin: 0;
+  color: #c9793f;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.about-service-copy h1 {
+  margin: .8rem 0 1.2rem;
+  color: #f6f2eb;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3.25rem, 4.55vw, 5.2rem);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: .87;
+  text-transform: uppercase;
+}
+
+.about-service-copy h1 span {
+  color: #c9793f;
+}
+
+.about-service-lede {
+  margin: 0;
+  color: #ddd2c2;
+  font-size: clamp(.98rem, 1.08vw, 1.1rem);
+  line-height: 1.62;
+}
+
+.about-service-body {
+  margin: .9rem 0 0;
+  color: #aeb1af;
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.about-service-details {
+  display: grid;
+  gap: 0;
+  margin-top: 1.3rem;
+  border-top: 1px solid rgba(255,255,255,.16);
+}
+
+.about-service-details article {
+  display: grid;
+  grid-template-columns: minmax(150px, .38fr) minmax(0, 1fr);
+  gap: 1.3rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+}
+
+.about-service-details h2 {
+  margin: 0;
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .035em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.about-service-details p {
+  margin: 0;
+  color: #aeb1af;
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+.about-service-quote {
+  margin: 1.25rem 0 0;
+  color: #c9793f;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(1.12rem, 1.45vw, 1.48rem);
+  font-weight: 700;
+  letter-spacing: .035em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.about-service-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.35rem;
+}
+
+.about-service-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.35rem;
+  background: #c9793f;
+  color: #111315;
+  font-size: .71rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.about-service-secondary {
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 800;
+  text-underline-offset: 6px;
+  text-transform: uppercase;
+}
+
+.about-service-photo-area {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.about-service-photo-frame {
+  width: 100%;
+  max-width: 650px;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  overflow: hidden;
+  background: #ece9e3;
+  border: 1px solid #989286;
+}
+
+.about-service-photo-frame img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 700px;
+  object-fit: contain;
+  object-position: center;
+  background: #d7d3cc;
+  border: 0;
+}
+
+@media (max-width: 1080px) {
+  .about-service-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-service-copy {
+    max-width: 780px;
+  }
+
+  .about-service-photo-frame {
+    max-width: 760px;
+    min-height: 580px;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-service-detail {
+    padding: 4rem 18px;
+  }
+
+  .about-service-copy h1 {
+    font-size: clamp(3rem, 14.5vw, 4.6rem);
+  }
+
+  .about-service-details article {
+    grid-template-columns: 1fr;
+    gap: .35rem;
+  }
+
+  .about-service-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-service-primary,
+  .about-service-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-service-secondary {
+    padding: 1rem;
+  }
+
+  .about-service-photo-frame {
+    min-height: 0;
+    padding: 8px;
+  }
+
+  .about-service-photo-frame img {
+    height: auto;
+  }
+}
+/* ABOUT SERVICE DETAIL END */
+
+/* ABOUT PERSONAL PHOTOS START */
+.about-personal-gallery {
+  max-width: 1644px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 6rem);
+  background: #f7f4ee;
+  color: #111315;
+}
+
+.about-personal-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.about-personal-eyebrow {
+  margin: 0;
+  color: #c9793f;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.about-personal-heading h2 {
+  margin: .65rem 0 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(2.8rem, 4.5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: .9;
+  text-transform: uppercase;
+}
+
+.about-personal-heading > p {
+  max-width: 530px;
+  margin: 0;
+  color: #626765;
+  font-size: .93rem;
+  line-height: 1.65;
+}
+
+.about-personal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+
+.about-personal-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #111315;
+}
+
+.about-personal-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.about-personal-card:hover img {
+  transform: scale(1.02);
+  filter: brightness(.9);
+}
+
+.about-personal-card figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 4rem 1.25rem 1.2rem;
+  background: linear-gradient(transparent, rgba(17, 19, 21, .92));
+  color: #fff;
+  pointer-events: none;
+}
+
+.about-personal-card strong,
+.about-personal-card span {
+  display: block;
+}
+
+.about-personal-card strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.about-personal-card span {
+  margin-top: .2rem;
+  color: #d7d3cb;
+  font-size: .65rem;
+}
+
+@media (max-width: 760px) {
+  .about-personal-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about-personal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-personal-card img {
+    transition: none;
+  }
+}
+/* ABOUT PERSONAL PHOTOS END */
+
+/* BOOKING POLICY FIRST LAYOUT START */
+.booking-compact-intro {
+  max-width: 1644px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 5rem);
+  background: #111315;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.booking-compact-intro h1 {
+  margin: .65rem 0 .9rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3.1rem, 4.8vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: .9;
+  text-transform: uppercase;
+}
+
+.booking-compact-intro > p:last-child {
+  max-width: 680px;
+  margin: 0;
+  color: #b9bcba;
+  font-size: .98rem;
+  line-height: 1.65;
+}
+
+.booking-policy-clean {
+  max-width: 1644px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 4.5vw, 4.5rem) clamp(2rem, 5vw, 5rem);
+  background: #f4f1eb;
+  color: #111315;
+}
+
+.booking-policy-clean .booking-policy-clean-heading,
+.booking-policy-clean .booking-policy-heading {
+  margin-bottom: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.booking-policy-clean h2,
+.booking-policy-clean #booking-policy-title {
+  margin: .55rem 0 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(2.65rem, 4vw, 4.5rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -.02em;
+  line-height: .92;
+  text-transform: uppercase;
+}
+
+.booking-policy-clean .booking-policy-clean-list,
+.booking-policy-clean .booking-policy-list {
+  border-top: 1px solid #d5cfc4;
+}
+
+.booking-policy-clean .booking-policy-clean-item,
+.booking-policy-clean .policy-card {
+  display: grid;
+  grid-template-columns: minmax(190px, .32fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  margin: 0;
+  padding: clamp(1.2rem, 2vw, 1.7rem) 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #d5cfc4;
+}
+
+.booking-policy-clean h3 {
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(1.25rem, 1.7vw, 1.65rem) !important;
+  font-weight: 700;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.booking-policy-clean .booking-policy-clean-item p,
+.booking-policy-clean .policy-card p {
+  margin: 0;
+  color: #555a58;
+  font-size: clamp(.9rem, 1vw, 1rem) !important;
+  line-height: 1.62;
+}
+
+.booking-policy-clean .booking-policy-clean-tagline,
+.booking-policy-clean .policy-tagline {
+  margin: clamp(1.5rem, 3vw, 2.3rem) 0 0;
+  color: #c9793f;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.85rem) !important;
+  font-weight: 700;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+/* The live calendar follows immediately after policy. */
+#booking {
+  max-width: 1644px;
+  margin: 0 auto;
+  border-top: 7px solid #c9793f;
+}
+
+/* Hide duplicate calendar-side marketing copy; retain the live calendar itself. */
+#booking .booking-copy,
+#booking .availability-copy,
+#booking .booking-intro,
+#booking .booking-section-copy {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .booking-compact-intro,
+  .booking-policy-clean {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .booking-policy-clean .booking-policy-clean-item,
+  .booking-policy-clean .policy-card {
+    grid-template-columns: 1fr;
+    gap: .45rem;
+  }
+}
+/* BOOKING POLICY FIRST LAYOUT END */
+
+/* BOOKING AND FOOTER BACKGROUND SEPARATION START */
+
+.booking-policy-clean {
+  background: #f4f1eb !important;
+  color: #111315 !important;
+}
+
+#booking {
+  background: #111315 !important;
+  color: #ffffff !important;
+}
+
+/* Keep the actual calendar card light and readable. */
+#booking [data-availability-calendar],
+#booking .availability-calendar {
+  background: #f7f4ee !important;
+  color: #111315 !important;
+}
+
+/* Footer should be darker than the calendar section. */
+.common-footer,
+.site-footer,
+footer[role="contentinfo"] {
+  background: #080a0b !important;
+  color: #ffffff !important;
+  border-top: 4px solid #c9793f !important;
+}
+
+/* BOOKING AND FOOTER BACKGROUND SEPARATION END */
+
+/* REVERSED BOOKING CALENDAR COLORS START */
+/* Light surrounding section with dark copy, reversing the original treatment. */
+#booking {
+  background: #e9e3da !important;
+  color: #111315 !important;
+  border-top: 7px solid #c9793f !important;
+}
+
+#booking .tag,
+#booking [class*="eyebrow"] {
+  color: #b7652f !important;
+}
+
+#booking h1,
+#booking h2,
+#booking h3,
+#booking h4,
+#booking .booking-copy,
+#booking .availability-copy,
+#booking .booking-section-copy {
+  color: #111315 !important;
+}
+
+#booking .booking-copy p,
+#booking .availability-copy p,
+#booking .booking-section-copy p,
+#booking .booking-copy li,
+#booking .availability-copy li {
+  color: #555a58 !important;
+}
+
+#booking .booking-copy li::before,
+#booking .availability-copy li::before {
+  color: #c9793f !important;
+}
+
+/* Keep the interactive calendar card lighter than the surrounding section. */
+#booking [data-availability-calendar],
+#booking .availability-calendar,
+#booking .calendar-card,
+#booking .availability-card {
+  background: #fffdf9 !important;
+  color: #111315 !important;
+  border: 1px solid #c9c1b6 !important;
+  box-shadow: 0 18px 42px rgba(17, 19, 21, .12) !important;
+}
+
+#booking [data-availability-calendar] *,
+#booking .availability-calendar * {
+  border-color: #d8d1c7;
+}
+
+/* Footer remains deep black, producing a clear end to the booking experience. */
+.common-footer,
+.site-footer,
+footer[role="contentinfo"] {
+  background: #080a0b !important;
+  color: #ffffff !important;
+  border-top: 4px solid #c9793f !important;
+}
+
+@media (max-width: 760px) {
+  #booking {
+    border-top-width: 5px !important;
+  }
+}
+/* REVERSED BOOKING CALENDAR COLORS END */
+
+/* BOOKING LEFT COPY BLACK TEXT START */
+
+#booking .booking-copy,
+#booking .availability-copy,
+#booking .booking-section-copy {
+  color: #111315 !important;
+}
+
+#booking .booking-copy p,
+#booking .availability-copy p,
+#booking .booking-section-copy p {
+  color: #303433 !important;
+  opacity: 1 !important;
+}
+
+#booking .booking-copy ul,
+#booking .availability-copy ul,
+#booking .booking-section-copy ul {
+  color: #111315 !important;
+}
+
+#booking .booking-copy li,
+#booking .availability-copy li,
+#booking .booking-section-copy li {
+  color: #111315 !important;
+  opacity: 1 !important;
+}
+
+/* Keep checklist marks copper. */
+#booking .booking-copy li::before,
+#booking .availability-copy li::before,
+#booking .booking-section-copy li::before {
+  color: #c9793f !important;
+  opacity: 1 !important;
+}
+
+/* Defensive selectors for direct supporting copy in the left column. */
+#booking [class*="copy"] > p,
+#booking [class*="copy"] > ul li {
+  color: #303433 !important;
+  opacity: 1 !important;
+}
+
+/* BOOKING LEFT COPY BLACK TEXT END */
+
+/* BOOKING LEFT COPY BLACK TEXT START */
+
+#booking .booking-copy,
+#booking .availability-copy,
+#booking .booking-section-copy {
+  color: #111315 !important;
+}
+
+#booking .booking-copy p,
+#booking .availability-copy p,
+#booking .booking-section-copy p {
+  color: #303433 !important;
+  opacity: 1 !important;
+}
+
+#booking .booking-copy ul,
+#booking .availability-copy ul,
+#booking .booking-section-copy ul {
+  color: #111315 !important;
+}
+
+#booking .booking-copy li,
+#booking .availability-copy li,
+#booking .booking-section-copy li {
+  color: #111315 !important;
+  opacity: 1 !important;
+}
+
+/* Keep checklist marks copper. */
+#booking .booking-copy li::before,
+#booking .availability-copy li::before,
+#booking .booking-section-copy li::before {
+  color: #c9793f !important;
+  opacity: 1 !important;
+}
+
+/* Defensive selectors for direct supporting copy in the left column. */
+#booking [class*="copy"] > p,
+#booking [class*="copy"] > ul li {
+  color: #303433 !important;
+  opacity: 1 !important;
+}
+
+/* BOOKING LEFT COPY BLACK TEXT END */
+
+/* FINAL COMPACT BOOKING STRUCTURE START */
+.booking-inline-policy,
+.booking-policy-clean,
+.booking-policy-section,
+.booking-page-policy {
+  display: none !important;
+}
+
+#booking {
+  padding-top: clamp(3rem, 5vw, 5rem) !important;
+}
+/* FINAL COMPACT BOOKING STRUCTURE END */
+
+/* HOME SIGNATURE RING START */
+.home-signature-ring {
+  max-width: 1644px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5.5vw, 6.5rem);
+  overflow: hidden;
+  background: linear-gradient(135deg, #151718, #090a0b);
+  color: #fff;
+}
+
+.home-signature-layout {
+  display: grid;
+  grid-template-columns: minmax(430px, .94fr) minmax(560px, 1.06fr);
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: center;
+  min-height: 720px;
+}
+
+.home-signature-copy {
+  max-width: 640px;
+  min-width: 0;
+}
+
+.home-signature-eyebrow {
+  margin: 0;
+  color: #c9793f;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.home-signature-copy h2 {
+  margin: .85rem 0 1.3rem;
+  color: #f7f4ee;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3.6rem, 5.3vw, 6.1rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: .87;
+  text-transform: uppercase;
+}
+
+.home-signature-copy h2 span {
+  display: block;
+  color: #c9793f;
+}
+
+.home-signature-lede {
+  max-width: 620px;
+  margin: 0;
+  color: #d7ccbc;
+  font-size: clamp(1rem, 1.2vw, 1.16rem);
+  line-height: 1.65;
+}
+
+.home-signature-points {
+  display: grid;
+  gap: .75rem;
+  margin: 1.7rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-signature-points li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: #f3efe7;
+  font-size: .9rem;
+  font-weight: 650;
+}
+
+.home-signature-points li::before {
+  position: absolute;
+  left: 0;
+  color: #c9793f;
+  content: "■";
+}
+
+.home-signature-prompt {
+  margin: 1.7rem 0 0;
+  color: #c9793f;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(1.15rem, 1.55vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.home-signature-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.7rem;
+}
+
+.home-signature-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 54px;
+  padding: 0 1.5rem;
+  background: #c9793f;
+  color: #111315;
+  font-size: .72rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.home-signature-secondary {
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  text-underline-offset: 6px;
+  text-transform: uppercase;
+}
+
+.home-signature-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.home-signature-circle {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: min(78%, 610px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 12px solid #c9793f;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 20px #f7f4ee,
+    0 0 0 22px #989286,
+    0 28px 65px rgba(0, 0, 0, .4);
+}
+
+.home-signature-circle img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.home-signature-monogram {
+  position: absolute;
+  right: 1%;
+  bottom: -8%;
+  color: rgba(255, 255, 255, .055);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(11rem, 17vw, 18rem);
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.home-signature-caption {
+  position: absolute;
+  z-index: 3;
+  bottom: 7%;
+  left: 6%;
+  margin: 0;
+  padding: .8rem 1rem;
+  background: #f7f4ee;
+  color: #111315;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1050px) {
+  .home-signature-layout {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .home-signature-copy {
+    max-width: 800px;
+  }
+
+  .home-signature-visual {
+    min-height: 680px;
+  }
+
+  .home-signature-circle {
+    width: min(78vw, 610px);
+  }
+}
+
+@media (max-width: 620px) {
+  .home-signature-ring {
+    padding: 4rem 18px;
+  }
+
+  .home-signature-copy h2 {
+    font-size: clamp(3.3rem, 15vw, 5rem);
+  }
+
+  .home-signature-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-signature-primary,
+  .home-signature-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-signature-secondary {
+    padding: 1rem;
+  }
+
+  .home-signature-visual {
+    min-height: 480px;
+  }
+
+  .home-signature-circle {
+    width: min(76vw, 430px);
+    border-width: 8px;
+    box-shadow:
+      0 0 0 12px #f7f4ee,
+      0 0 0 14px #989286,
+      0 20px 45px rgba(0, 0, 0, .35);
+  }
+
+  .home-signature-caption {
+    bottom: 3%;
+    left: 3%;
+  }
+}
+/* HOME SIGNATURE RING END */
+
+/* EQUAL HOME FEATURED WORK CARDS START */
+.home-equal-work-section {
+  overflow: hidden;
+}
+
+/* Normalize every grid-like wrapper inside this specific section. */
+.home-equal-work-section [class*="grid"],
+.home-equal-work-section [class*="gallery"],
+.home-equal-work-section [class*="cards"] {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(1rem, 1.6vw, 1.5rem) !important;
+  align-items: stretch !important;
+}
+
+/* Direct wrappers around the three preview images receive equal dimensions. */
+.home-equal-work-section figure,
+.home-equal-work-section article,
+.home-equal-work-section [class*="card"],
+.home-equal-work-section [class*="item"] {
+  min-width: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+.home-equal-work-section figure > a,
+.home-equal-work-section article > a,
+.home-equal-work-section [class*="card"] > a,
+.home-equal-work-section [class*="item"] > a {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.home-equal-work-section figure,
+.home-equal-work-section article,
+.home-equal-work-section [class*="card"],
+.home-equal-work-section [class*="item"] {
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+}
+
+.home-equal-work-section img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+@media (max-width: 900px) {
+  .home-equal-work-section [class*="grid"],
+  .home-equal-work-section [class*="gallery"],
+  .home-equal-work-section [class*="cards"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-equal-work-section [class*="grid"],
+  .home-equal-work-section [class*="gallery"],
+  .home-equal-work-section [class*="cards"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .home-equal-work-section figure,
+  .home-equal-work-section article,
+  .home-equal-work-section [class*="card"],
+  .home-equal-work-section [class*="item"] {
+    aspect-ratio: 4 / 5 !important;
+  }
+}
+/* EQUAL HOME FEATURED WORK CARDS END */
+
+/* MATCH SELECTED WORK TO SIGNATURE WIDTH START */
+/* Match the centered boundary used by the Signature Ring section above. */
+.home-selected-work-wide {
+  width: calc(100% - 32px) !important;
+  max-width: 1644px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-right: clamp(2rem, 5.5vw, 6.5rem) !important;
+  padding-left: clamp(2rem, 5.5vw, 6.5rem) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Remove narrower inner maximum widths inherited from older versions. */
+.home-selected-work-wide > .wrap,
+.home-selected-work-wide > .container,
+.home-selected-work-wide > [class*="inner"],
+.home-selected-work-wide > [class*="content"] {
+  width: 100% !important;
+  max-width: none !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Keep the approved three equal cards across the newly widened area. */
+.home-selected-work-wide [class*="grid"],
+.home-selected-work-wide [class*="gallery"],
+.home-selected-work-wide [class*="cards"] {
+  width: 100% !important;
+  max-width: none !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(1rem, 1.6vw, 1.5rem) !important;
+}
+
+.home-selected-work-wide figure,
+.home-selected-work-wide article,
+.home-selected-work-wide [class*="card"],
+.home-selected-work-wide [class*="item"] {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+@media (min-width: 2200px) {
+  .home-selected-work-wide {
+    width: min(calc(100% - 96px), 1644px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-selected-work-wide {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+
+  .home-selected-work-wide [class*="grid"],
+  .home-selected-work-wide [class*="gallery"],
+  .home-selected-work-wide [class*="cards"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-selected-work-wide {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+
+  .home-selected-work-wide [class*="grid"],
+  .home-selected-work-wide [class*="gallery"],
+  .home-selected-work-wide [class*="cards"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* MATCH SELECTED WORK TO SIGNATURE WIDTH END */
+
+/* HOME REVIEWS PREMIUM CONTRAST START */
+.home-reviews-premium {
+  width: calc(100% - 32px);
+  max-width: 1644px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 5.5rem);
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff, #ede7dc);
+  color: #111315;
+}
+
+.home-reviews-premium-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: end;
+}
+
+.home-reviews-premium-eyebrow {
+  margin: 0;
+  color: #c9793f;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.home-reviews-premium h2 {
+  margin: .65rem 0 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3.4rem, 5.3vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: .88;
+  text-transform: uppercase;
+}
+
+.home-reviews-premium-intro {
+  max-width: 650px;
+  margin: 1rem 0 0;
+  color: #5f6462;
+  font-size: .94rem;
+  line-height: 1.65;
+}
+
+.home-reviews-premium-rating {
+  min-width: 180px;
+  text-align: right;
+}
+
+.home-reviews-premium-rating span,
+.home-reviews-premium-rating small {
+  display: block;
+}
+
+.home-reviews-premium-rating span {
+  color: #c9793f;
+  font-size: 1.1rem;
+  letter-spacing: .12em;
+}
+
+.home-reviews-premium-rating small {
+  margin-top: .35rem;
+  color: #686d6b;
+  font-size: .62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.home-reviews-premium-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 1.6vw, 1.4rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+  align-items: stretch;
+}
+
+.home-reviews-premium-card {
+  display: flex;
+  min-width: 0;
+  min-height: 350px;
+  flex-direction: column;
+  padding: clamp(1.4rem, 2vw, 1.8rem);
+  background: #111315;
+  color: #fff;
+  border: 1px solid #2e3132;
+  box-shadow: 0 14px 34px rgba(17, 19, 21, .12);
+}
+
+.home-reviews-premium-card-featured {
+  background: #c9793f;
+  border-color: #c9793f;
+}
+
+.home-reviews-premium-stars {
+  color: #c9793f;
+  font-size: .95rem;
+  letter-spacing: .1em;
+}
+
+.home-reviews-premium-card-featured .home-reviews-premium-stars {
+  color: #fff;
+}
+
+.home-reviews-premium-card blockquote {
+  margin: 1.2rem 0 0;
+  color: #f0ede6;
+  font-size: clamp(.87rem, .95vw, .98rem);
+  line-height: 1.72;
+}
+
+.home-reviews-premium-card footer {
+  margin-top: auto;
+  padding-top: 1.8rem;
+  background: transparent;
+  border: 0;
+}
+
+.home-reviews-premium-card footer strong,
+.home-reviews-premium-card footer span {
+  display: block;
+}
+
+.home-reviews-premium-card footer strong {
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.home-reviews-premium-card footer span {
+  margin-top: .2rem;
+  color: #929694;
+  font-size: .65rem;
+}
+
+.home-reviews-premium-card-featured footer span {
+  color: #fff;
+}
+
+.home-reviews-premium-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.4rem;
+  padding: 1.1rem 1.3rem;
+  background: #fff;
+  border: 1px solid #d4cdc2;
+}
+
+.home-reviews-premium-cta p {
+  margin: 0;
+  color: #555a58;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.home-reviews-premium-cta a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 1.2rem;
+  background: #111315;
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (min-width: 2200px) {
+  .home-reviews-premium {
+    width: min(calc(100% - 96px), 1644px);
+  }
+}
+
+@media (max-width: 950px) {
+  .home-reviews-premium-header {
+    grid-template-columns: 1fr;
+  }
+
+  .home-reviews-premium-rating {
+    text-align: left;
+  }
+
+  .home-reviews-premium-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home-reviews-premium-card {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-reviews-premium {
+    width: 100%;
+    padding: 3.5rem 18px;
+  }
+
+  .home-reviews-premium h2 {
+    font-size: clamp(3.1rem, 14vw, 4.8rem);
+  }
+
+  .home-reviews-premium-cta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-reviews-premium-cta a {
+    width: 100%;
+  }
+}
+/* HOME REVIEWS PREMIUM CONTRAST END */
+
+/* HOME SELECTED WORK COPPER BACKGROUND START */
+.home-selected-work-copper {
+  background: #c9793f !important;
+  color: #111315 !important;
+}
+
+.home-selected-work-copper .tag,
+.home-selected-work-copper [class*="eyebrow"] {
+  color: #111315 !important;
+  opacity: .78 !important;
+}
+
+.home-selected-work-copper h1,
+.home-selected-work-copper h2,
+.home-selected-work-copper h3 {
+  color: #111315 !important;
+  -webkit-text-fill-color: #111315 !important;
+}
+
+.home-selected-work-copper > p,
+.home-selected-work-copper [class*="intro"],
+.home-selected-work-copper [class*="lead"],
+.home-selected-work-copper [class*="copy"] p {
+  color: #2c211b !important;
+  -webkit-text-fill-color: #2c211b !important;
+  opacity: 1 !important;
+}
+
+.home-selected-work-copper a:not([class*="card"]):not([class*="item"]) {
+  color: #111315 !important;
+  -webkit-text-fill-color: #111315 !important;
+  border-color: #111315 !important;
+}
+
+.home-selected-work-copper a:not([class*="card"]):not([class*="item"]):hover,
+.home-selected-work-copper a:not([class*="card"]):not([class*="item"]):focus-visible {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: #111315 !important;
+}
+
+/* Keep photograph captions readable over their existing dark gradients. */
+.home-selected-work-copper figure figcaption,
+.home-selected-work-copper [class*="card"] [class*="caption"],
+.home-selected-work-copper [class*="item"] [class*="caption"] {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.home-selected-work-copper figure figcaption *,
+.home-selected-work-copper [class*="caption"] * {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+/* HOME SELECTED WORK COPPER BACKGROUND END */
