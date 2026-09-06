@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="copper">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Contact and Location | Chris Fleming The Barber</title><meta name="description" content="Book an appointment with Chris Fleming, a professional barber in Roanoke, Virginia."><link rel="canonical" href="https://christhebarber.denduluru.com/contact.html"><meta property="og:title" content="Chris Fleming The Barber"><meta property="og:description" content="Success favors the well groomed. Reserve your appointment with Chris."><meta property="og:url" content="https://christhebarber.denduluru.com/"><link rel="stylesheet" href="/assets/styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BarberShop","name":"Chris Fleming The Barber","slogan":"Success Favors the Well Groomed","url":"https://christhebarber.denduluru.com/","telephone": "+15406320727","email": "successfavorsthewellgroomed@gmail.com","address":{"@type":"PostalAddress","streetAddress": "1118 Main Street","addressLocality": "Roanoke","addressRegion": "VA","postalCode": "24015","addressCountry":"US"},"sameAs":["https://www.facebook.com/chrisflemingThebarber/","https://christhebarber.setmore.com/"]}</script>  <link rel="stylesheet" href="/assets/availability-calendar.css">
   <link rel="stylesheet" href="/assets/work-gallery.css">
   <link rel="stylesheet" href="/assets/about-personal.css">
@@ -376,6 +376,9 @@
 }
 </style>
 <!-- EXACT_NATIVE_MENU_COLORS_END -->
+<!-- THEME_SYSTEM_CSS_START -->
+<link rel="stylesheet" href="/assets/theme-system.css">
+<!-- THEME_SYSTEM_CSS_END -->
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
@@ -516,13 +519,13 @@
         <h3>Explore</h3>
         <a href="/about.html">About</a>
         <a href="/work.html">Selected Work</a>
-        <a href="/reviews.html">Client Reviews</a>
+        
       </div>
 
       <div>
         <h3>Appointments</h3>
         <a href="/booking.html">Live Availability</a>
-        <a href="/policy.html">Booking Policy</a>
+        
         <a
           href="https://christhebarber.setmore.com/"
           target="_blank"
@@ -592,5 +595,36 @@
   <a class="cfm-simple-book" href="/booking.html">Book Appointment</a>
 </nav>
 <!-- CFM_SIMPLE_MOBILE_ACTIONS_END -->
+<!-- BUSINESS_HOURS_SCHEDULE_THEME_START -->
+<script>
+(function(){
+  function norm(v){return(v||'').replace(/\s+/g,' ').trim().toUpperCase();}
+  function val(n,f){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()||f;}
+  function imp(el,p,v){if(el)el.style.setProperty(p,v,'important');}
+  function apply(){
+    var days=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+    var candidates=Array.from(document.querySelectorAll('section,article,div,main')).filter(function(el){
+      var t=norm(el.textContent);return days.every(function(day){return t.indexOf(day)>=0;});
+    }).sort(function(a,b){return a.textContent.length-b.textContent.length;});
+    var card=candidates[0];if(!card)return;
+    card.classList.add('themed-business-hours-card');
+    var primary=val('--theme-primary','#6f9fba'),dark=val('--theme-dark','#17232d'),onDark=val('--theme-on-dark','#fff'),muted=val('--theme-muted-on-dark','#ced9df'),border=val('--theme-dark-border','#405462');
+    imp(card,'background-color',dark);imp(card,'color',onDark);
+    card.querySelectorAll('h1,h2,h3,h4').forEach(function(el){imp(el,'color',onDark);imp(el,'-webkit-text-fill-color',onDark);});
+    card.querySelectorAll('a').forEach(function(el){imp(el,'color',primary);imp(el,'-webkit-text-fill-color',primary);imp(el,'border-color',primary);});
+    card.querySelectorAll('*').forEach(function(el){
+      var own=norm(Array.from(el.childNodes).filter(function(n){return n.nodeType===3;}).map(function(n){return n.textContent;}).join(' '));
+      if(own.indexOf('BUSINESS HOURS')>=0||own.indexOf('CHECK CURRENT OPENINGS')>=0||/10:00\s*AM.*5:00\s*PM/.test(own)){imp(el,'color',primary);imp(el,'-webkit-text-fill-color',primary);imp(el,'border-color',primary);}
+      if(own==='CLOSED'){imp(el,'color',muted);imp(el,'-webkit-text-fill-color',muted);}
+      if(el.matches('li,tr,[class*="row"]'))imp(el,'border-color',border);
+    });
+  }
+  apply();document.addEventListener('DOMContentLoaded',apply,{once:true});document.addEventListener('christhemechange',apply);window.addEventListener('pageshow',apply);setTimeout(apply,100);setTimeout(apply,600);
+})();
+</script>
+<!-- BUSINESS_HOURS_SCHEDULE_THEME_END -->
+<!-- THEME_SYSTEM_JS_START -->
+<script src="/assets/theme-system.js"></script>
+<!-- THEME_SYSTEM_JS_END -->
 </body>
 </html>

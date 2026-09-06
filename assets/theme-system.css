@@ -1,0 +1,467 @@
+/* CHRISTHEBARBER CONFIGURABLE THEME SYSTEM */
+:root,
+html[data-theme="copper"] {
+  --theme-primary:#c9793f;
+  --theme-primary-hover:#b86832;
+  --theme-on-primary:#111315;
+  --theme-dark:#111315;
+  --theme-deep:#080a0b;
+  --theme-dark-soft:#202324;
+  --theme-page:#f7f4ee;
+  --theme-surface:#fffdf9;
+  --theme-muted-surface:#e9e3da;
+  --theme-text:#111315;
+  --theme-muted-text:#555a58;
+  --theme-on-dark:#ffffff;
+  --theme-muted-on-dark:#d7ccbc;
+  --theme-border:#d4cdc2;
+  --theme-dark-border:#343738;
+  --theme-shadow:rgba(17,19,21,.14);
+}
+html[data-theme="navy-gold"] {
+  --theme-primary:#c6a15b;--theme-primary-hover:#ae8845;--theme-on-primary:#101a2b;
+  --theme-dark:#101a2b;--theme-deep:#08101d;--theme-dark-soft:#1b2b44;
+  --theme-page:#f6f2e9;--theme-surface:#fffdf8;--theme-muted-surface:#e5e9ef;
+  --theme-text:#101a2b;--theme-muted-text:#596273;--theme-on-dark:#fff;--theme-muted-on-dark:#d5d9e0;
+  --theme-border:#ced3da;--theme-dark-border:#33415a;--theme-shadow:rgba(16,26,43,.16);
+}
+html[data-theme="forest-brass"] {
+  --theme-primary:#bd934f;--theme-primary-hover:#a67d3c;--theme-on-primary:#10251f;
+  --theme-dark:#10251f;--theme-deep:#071510;--theme-dark-soft:#1d3a31;
+  --theme-page:#f4f1e9;--theme-surface:#fffdf8;--theme-muted-surface:#e1e7df;
+  --theme-text:#10251f;--theme-muted-text:#58645f;--theme-on-dark:#fff;--theme-muted-on-dark:#d1d9d4;
+  --theme-border:#ccd4ce;--theme-dark-border:#355046;--theme-shadow:rgba(16,37,31,.16);
+}
+html[data-theme="burgundy-cream"] {
+  --theme-primary:#b58a53;--theme-primary-hover:#9c713f;--theme-on-primary:#2a0f17;
+  --theme-dark:#2a0f17;--theme-deep:#18070d;--theme-dark-soft:#47202b;
+  --theme-page:#f8f1e8;--theme-surface:#fffaf4;--theme-muted-surface:#eadfd7;
+  --theme-text:#2a0f17;--theme-muted-text:#6a5b5e;--theme-on-dark:#fff;--theme-muted-on-dark:#ddcfd2;
+  --theme-border:#d9cbc5;--theme-dark-border:#60404a;--theme-shadow:rgba(42,15,23,.16);
+}
+html[data-theme="slate-blue"] {
+  --theme-primary:#6f9fba;--theme-primary-hover:#5888a3;--theme-on-primary:#17232d;
+  --theme-dark:#17232d;--theme-deep:#0c151d;--theme-dark-soft:#263946;
+  --theme-page:#f4f7f8;--theme-surface:#fff;--theme-muted-surface:#dfe8ec;
+  --theme-text:#17232d;--theme-muted-text:#59666e;--theme-on-dark:#fff;--theme-muted-on-dark:#ced9df;
+  --theme-border:#cad5da;--theme-dark-border:#405462;--theme-shadow:rgba(23,35,45,.16);
+}
+html[data-theme="midnight-teal"] {
+  --theme-primary:#62b6ac;--theme-primary-hover:#4c9d94;--theme-on-primary:#0d2022;
+  --theme-dark:#0d2022;--theme-deep:#071416;--theme-dark-soft:#17383b;
+  --theme-page:#f2f7f6;--theme-surface:#fff;--theme-muted-surface:#dcebea;
+  --theme-text:#0d2022;--theme-muted-text:#526766;--theme-on-dark:#fff;--theme-muted-on-dark:#c8dad8;
+  --theme-border:#c7d8d6;--theme-dark-border:#36585a;--theme-shadow:rgba(13,32,34,.16);
+}
+
+html[data-theme] body{background:var(--theme-page)!important;color:var(--theme-text)!important}
+html[data-theme] :focus-visible{outline-color:var(--theme-primary)!important}
+html[data-theme] .sftwg-t04-copy,html[data-theme] .home-signature-ring,html[data-theme] .about-service-detail{background:var(--theme-dark)!important;color:var(--theme-on-dark)!important}
+html[data-theme] .sftwg-t04-brand-panel,html[data-theme] .home-selected-work-copper{background:var(--theme-primary)!important;color:var(--theme-on-primary)!important}
+html[data-theme] .home-signature-primary,html[data-theme] .about-service-primary,html[data-theme] .home-reviews-premium-card-featured{background:var(--theme-primary)!important;color:var(--theme-on-primary)!important;border-color:var(--theme-primary)!important}
+html[data-theme] .home-reviews-premium{background:linear-gradient(135deg,var(--theme-surface),var(--theme-muted-surface))!important}
+html[data-theme] .home-reviews-premium-card{background:var(--theme-dark)!important;color:var(--theme-on-dark)!important;border-color:var(--theme-dark-border)!important}
+html[data-theme] #booking{background:var(--theme-muted-surface)!important;color:var(--theme-text)!important;border-color:var(--theme-primary)!important}
+html[data-theme] #booking [data-availability-calendar]{background:var(--theme-surface)!important;color:var(--theme-text)!important;border-color:var(--theme-border)!important}
+html[data-theme] .tag,html[data-theme] [class*="eyebrow"],html[data-theme] [class*="stars"]{color:var(--theme-primary)!important;-webkit-text-fill-color:var(--theme-primary)!important}
+html[data-theme] .site-header{background:var(--theme-surface)!important;border-color:var(--theme-border)!important}
+html[data-theme] .common-footer,html[data-theme] .site-footer,html[data-theme] footer[role="contentinfo"]{background:var(--theme-deep)!important;color:var(--theme-on-dark)!important;border-color:var(--theme-primary)!important}
+html[data-theme] .common-footer h2,html[data-theme] .common-footer h3,html[data-theme] .common-footer h4{color:var(--theme-primary)!important;-webkit-text-fill-color:var(--theme-primary)!important}
+html[data-theme] .themed-business-hours-card{background:var(--theme-dark)!important;color:var(--theme-on-dark)!important}
+html[data-theme] .themed-business-hours-card a{color:var(--theme-primary)!important;-webkit-text-fill-color:var(--theme-primary)!important}
+
+/* HOME SIGNATURE TO WORK GAP START */
+:root {
+  --home-major-section-gap: clamp(18px, 1.6vw, 26px);
+}
+
+/*
+  Create a clean page-background channel between the Signature Ring and
+  Selected Work cards without changing either section's width or padding.
+*/
+.home-signature-ring + .home-selected-work-copper {
+  margin-top: var(--home-major-section-gap) !important;
+}
+
+/* Fallback when another wrapper or generated element sits between sections. */
+.home-selected-work-copper {
+  position: relative;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --home-major-section-gap: 14px;
+  }
+}
+/* HOME SIGNATURE TO WORK GAP END */
+
+/* HOME MAJOR ROUNDED CARDS START */
+:root {
+  --home-major-card-radius: 30px;
+  --home-major-card-border-width: 1px;
+  --home-major-card-shadow: 0 18px 48px var(--theme-shadow);
+}
+
+.home-signature-ring,
+.home-selected-work-copper {
+  border: var(--home-major-card-border-width) solid var(--theme-border) !important;
+  border-radius: var(--home-major-card-radius) !important;
+  box-shadow: var(--home-major-card-shadow) !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+/* Keep the cards visually aligned inside the same centered page frame. */
+.home-signature-ring,
+.home-selected-work-copper {
+  width: calc(100% - 32px) !important;
+  max-width: var(--theme-max-width, 1644px) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* Preserve the configurable gap between the two cards. */
+.home-signature-ring + .home-selected-work-copper {
+  margin-top: var(--home-major-section-gap, 24px) !important;
+}
+
+/* The work images receive a smaller matching radius. */
+.home-selected-work-copper figure,
+.home-selected-work-copper [class*="card"],
+.home-selected-work-copper [class*="item"] {
+  border-radius: 18px !important;
+  overflow: hidden !important;
+}
+
+.home-selected-work-copper figure img,
+.home-selected-work-copper [class*="card"] img,
+.home-selected-work-copper [class*="item"] img {
+  border-radius: inherit !important;
+}
+
+/* Avoid rounding text-only wrappers accidentally selected by older card names. */
+.home-selected-work-copper [class*="header"],
+.home-selected-work-copper [class*="heading"],
+.home-selected-work-copper [class*="copy"] {
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --home-major-card-radius: 20px;
+    --home-major-card-shadow: 0 12px 30px var(--theme-shadow);
+  }
+
+  .home-signature-ring,
+  .home-selected-work-copper {
+    width: calc(100% - 20px) !important;
+  }
+
+  .home-selected-work-copper figure,
+  .home-selected-work-copper [class*="card"],
+  .home-selected-work-copper [class*="item"] {
+    border-radius: 14px !important;
+  }
+}
+/* HOME MAJOR ROUNDED CARDS END */
+
+/* FEATURED REVIEW ACCENT DEFINITIVE START */
+/* Generic review-card rules must not override the featured center card. */
+html[data-theme] body .home-reviews-premium-card.home-reviews-premium-card-featured {
+  background: var(--theme-primary) !important;
+  background-color: var(--theme-primary) !important;
+  color: var(--theme-on-primary) !important;
+  border-color: var(--theme-primary) !important;
+  box-shadow: 0 18px 42px var(--theme-shadow) !important;
+}
+
+html[data-theme] body .home-reviews-premium-card.home-reviews-premium-card-featured blockquote,
+html[data-theme] body .home-reviews-premium-card.home-reviews-premium-card-featured footer,
+html[data-theme] body .home-reviews-premium-card.home-reviews-premium-card-featured footer strong,
+html[data-theme] body .home-reviews-premium-card.home-reviews-premium-card-featured footer span,
+html[data-theme] body .home-reviews-premium-card.home-reviews-premium-card-featured .home-reviews-premium-stars,
+html[data-theme] body .home-reviews-premium-card.home-reviews-premium-card-featured * {
+  color: var(--theme-on-primary) !important;
+  -webkit-text-fill-color: var(--theme-on-primary) !important;
+}
+
+/* Keep the outer cards dark and visually balanced. */
+html[data-theme] body .home-reviews-premium-card:not(.home-reviews-premium-card-featured) {
+  background: var(--theme-dark) !important;
+  background-color: var(--theme-dark) !important;
+  color: var(--theme-on-dark) !important;
+  border-color: var(--theme-dark-border) !important;
+}
+
+html[data-theme] body .home-reviews-premium-card:not(.home-reviews-premium-card-featured) blockquote,
+html[data-theme] body .home-reviews-premium-card:not(.home-reviews-premium-card-featured) footer strong {
+  color: var(--theme-on-dark) !important;
+  -webkit-text-fill-color: var(--theme-on-dark) !important;
+}
+
+html[data-theme] body .home-reviews-premium-card:not(.home-reviews-premium-card-featured) footer span {
+  color: var(--theme-muted-on-dark) !important;
+  -webkit-text-fill-color: var(--theme-muted-on-dark) !important;
+}
+
+html[data-theme] body .home-reviews-premium-card:not(.home-reviews-premium-card-featured) .home-reviews-premium-stars {
+  color: var(--theme-primary) !important;
+  -webkit-text-fill-color: var(--theme-primary) !important;
+}
+/* FEATURED REVIEW ACCENT DEFINITIVE END */
+
+/* REFINED REVIEWER NAMES AND COUNT START */
+.home-reviews-premium-card footer {
+  display: flex !important;
+  align-items: flex-end !important;
+  min-height: 3.25rem !important;
+}
+
+.home-reviews-premium-card footer strong {
+  display: block !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  line-height: 1.08 !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.home-reviews-premium-card .reviewer-nickname {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+/* Dates were removed, so suppress any empty or legacy metadata spans. */
+.home-reviews-premium-card footer > span:empty,
+.home-reviews-premium-card footer > span:not(.reviewer-nickname) {
+  display: none !important;
+}
+/* REFINED REVIEWER NAMES AND COUNT END */
+
+/* UNIFIED REVIEW TYPOGRAPHY START */
+/* All three testimonial bodies use exactly the same type scale. */
+.home-reviews-premium-cards .home-reviews-premium-card blockquote {
+  margin: 1.2rem 0 0 !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font-family: inherit !important;
+  font-size: clamp(.92rem, .98vw, 1.02rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.72 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Reviewer footer height and alignment are identical across all cards. */
+.home-reviews-premium-cards .home-reviews-premium-card footer {
+  display: flex !important;
+  align-items: flex-end !important;
+  min-height: 2.25rem !important;
+  margin-top: auto !important;
+  padding-top: 1.6rem !important;
+}
+
+/* Keep each complete reviewer name on one line and at one consistent size. */
+.home-reviews-premium-cards .home-reviews-premium-card footer strong {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font-family: "Barlow Condensed", sans-serif !important;
+  font-size: clamp(.95rem, 1.12vw, 1.18rem) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: .025em !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  overflow-wrap: normal !important;
+  word-break: keep-all !important;
+  text-transform: uppercase !important;
+}
+
+/* Remove any inherited small nickname treatment from the earlier version. */
+.home-reviews-premium-cards .home-reviews-premium-card footer strong span,
+.home-reviews-premium-cards .home-reviews-premium-card .reviewer-nickname {
+  display: inline !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+  white-space: nowrap !important;
+  text-transform: inherit !important;
+}
+
+/* Relative-date metadata remains removed. */
+.home-reviews-premium-cards .home-reviews-premium-card footer > span {
+  display: none !important;
+}
+
+@media (max-width: 1100px) {
+  .home-reviews-premium-cards .home-reviews-premium-card footer strong {
+    font-size: .94rem !important;
+    letter-spacing: .015em !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .home-reviews-premium-cards .home-reviews-premium-card footer strong {
+    font-size: 1.12rem !important;
+  }
+}
+/* UNIFIED REVIEW TYPOGRAPHY END */
+
+/* HOME REVIEWS ROUNDED TREATMENT START */
+:root {
+  --home-reviews-section-radius: 30px;
+  --home-review-card-radius: 22px;
+  --home-reviews-cta-radius: 16px;
+}
+
+/* Rounded outer review section, matching the major Home cards. */
+.home-reviews-premium {
+  border: 1px solid var(--theme-border) !important;
+  border-radius: var(--home-reviews-section-radius) !important;
+  box-shadow: 0 18px 48px var(--theme-shadow) !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+/* Rounded testimonial cards with equal clipping and consistent shadows. */
+.home-reviews-premium-cards .home-reviews-premium-card {
+  border-radius: var(--home-review-card-radius) !important;
+  overflow: hidden !important;
+  box-shadow: 0 14px 30px var(--theme-shadow) !important;
+}
+
+/* Preserve the active accent on the featured center card. */
+html[data-theme] body .home-reviews-premium-cards
+.home-reviews-premium-card.home-reviews-premium-card-featured {
+  background: var(--theme-primary) !important;
+  background-color: var(--theme-primary) !important;
+  border-color: var(--theme-primary) !important;
+}
+
+/* Give the bottom review action a softer, coordinated card shape. */
+.home-reviews-premium-cta {
+  border-radius: var(--home-reviews-cta-radius) !important;
+  overflow: hidden !important;
+}
+
+.home-reviews-premium-cta a {
+  border-radius: 999px !important;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --home-reviews-section-radius: 20px;
+    --home-review-card-radius: 18px;
+    --home-reviews-cta-radius: 14px;
+  }
+
+  .home-reviews-premium {
+    box-shadow: 0 12px 30px var(--theme-shadow) !important;
+  }
+}
+/* HOME REVIEWS ROUNDED TREATMENT END */
+
+/* GALLERY THEME PRIMARY ROUNDED CARDS START */
+:root {
+  --gallery-panel-radius: 30px;
+  --gallery-card-radius: 20px;
+  --gallery-panel-gap: clamp(14px, 1.4vw, 22px);
+}
+
+/* Copper by default; automatically follows any configured theme preview. */
+.themed-gallery-panel {
+  width: calc(100% - 32px) !important;
+  max-width: var(--theme-max-width, 1644px) !important;
+  margin: clamp(18px, 2vw, 30px) auto !important;
+  padding: clamp(24px, 4vw, 64px) !important;
+  background: var(--theme-primary) !important;
+  color: var(--theme-on-primary) !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: var(--gallery-panel-radius) !important;
+  box-shadow: 0 18px 48px var(--theme-shadow) !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+.themed-gallery-panel h1,
+.themed-gallery-panel h2,
+.themed-gallery-panel h3,
+.themed-gallery-panel > p,
+.themed-gallery-panel [class*="intro"],
+.themed-gallery-panel [class*="lead"] {
+  color: var(--theme-on-primary) !important;
+  -webkit-text-fill-color: var(--theme-on-primary) !important;
+}
+
+.themed-gallery-panel [class*="grid"],
+.themed-gallery-panel [class*="gallery"] {
+  gap: var(--gallery-panel-gap) !important;
+}
+
+.themed-gallery-panel .uniform-gallery-item {
+  position: relative !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  background: var(--theme-dark) !important;
+  border: 1px solid color-mix(in srgb, var(--theme-on-primary) 24%, transparent) !important;
+  border-radius: var(--gallery-card-radius) !important;
+  box-shadow: 0 12px 28px var(--theme-shadow) !important;
+  isolation: isolate !important;
+  transform: translateZ(0);
+}
+
+.themed-gallery-panel .uniform-gallery-item img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: inherit !important;
+  object-fit: cover !important;
+  transition: transform .35s ease, filter .35s ease !important;
+}
+
+.themed-gallery-panel .uniform-gallery-item:hover img,
+.themed-gallery-panel .uniform-gallery-item:focus-within img {
+  transform: scale(1.025) !important;
+  filter: brightness(.93) !important;
+}
+
+.themed-gallery-panel .uniform-gallery-item [class*="caption"],
+.themed-gallery-panel .uniform-gallery-item figcaption,
+.themed-gallery-panel .uniform-gallery-item [class*="view"] {
+  border-radius: 999px !important;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --gallery-panel-radius: 20px;
+    --gallery-card-radius: 16px;
+    --gallery-panel-gap: 12px;
+  }
+
+  .themed-gallery-panel {
+    width: calc(100% - 20px) !important;
+    padding: 18px !important;
+    box-shadow: 0 12px 30px var(--theme-shadow) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .themed-gallery-panel .uniform-gallery-item img {
+    transition: none !important;
+  }
+}
+
+@supports not (color: color-mix(in srgb, black 50%, white)) {
+  .themed-gallery-panel .uniform-gallery-item {
+    border-color: var(--theme-border) !important;
+  }
+}
+/* GALLERY THEME PRIMARY ROUNDED CARDS END */
