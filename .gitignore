@@ -1,13 +1,48 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and local runtime
+*.log
+*.pid
 .env
 .env.*
 !.env.example
-setmore-secret-local.json
-*.pem
-*.key
+
+# Dependencies and generated output
 node_modules/
-.aws-sam/
-samconfig.toml
-coverage/
 dist/
+build/
+coverage/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local backups and deployment snapshots
 *.backup.*
+*.backup-*
+*-backup-*/
+pre-aws-release-*/
+theme-system-backup-*/
+slate-theme-mapping-backup-*/
+mobile-*-backup-*/
+gallery-*-backup-*/
+home-*-backup-*/
+about-*-backup-*/
+
+# Temporary archives
+*.tmp
+*.temp

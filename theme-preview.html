@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-theme="copper">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Configurable Theme Preview</title>
+  <link rel="stylesheet" href="/assets/theme-system.css">
+  <script src="/assets/theme-system.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: clamp(24px, 5vw, 64px); font-family: Inter, Arial, sans-serif; background: var(--theme-page); color: var(--theme-text); }
+    main { max-width: 1240px; margin: auto; }
+    .eyebrow { margin: 0; font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: .3rem 0 1rem; font-size: clamp(3rem, 7vw, 6rem); line-height: .92; }
+    .intro { max-width: 850px; line-height: 1.65; }
+    .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 30px; }
+    .theme-card { display: flex; min-width: 0; flex-direction: column; padding: 18px; background: var(--preview-surface); color: var(--preview-text); border: 1px solid var(--preview-border); box-shadow: 0 12px 28px var(--preview-shadow); }
+    .swatches { display: grid; grid-template-columns: 1fr 1fr; height: 112px; border: 1px solid var(--preview-border); }
+    .swatch-dark { background: var(--preview-dark); }
+    .swatch-primary { background: var(--preview-primary); }
+    .mini-surfaces { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 7px; }
+    .mini-surfaces span { height: 12px; border: 1px solid var(--preview-border); }
+    .mini-page { background: var(--preview-page); }
+    .mini-muted { background: var(--preview-muted); }
+    .mini-deep { background: var(--preview-deep); }
+    .theme-card h2 { margin: 1rem 0 .4rem; font-size: 1.35rem; line-height: 1.08; }
+    .colors { margin: 0 0 1rem; color: var(--preview-muted-text); font-size: .68rem; line-height: 1.45; }
+    .actions { display: grid; gap: 8px; margin-top: auto; }
+    button, .homepage-link { min-height: 42px; padding: .7rem .8rem; border: 0; background: var(--preview-primary); color: var(--preview-on-primary); font-weight: 800; text-align: center; text-decoration: none; cursor: pointer; }
+    .remember { background: var(--preview-dark); color: var(--preview-on-dark); }
+    .active-label { min-height: 20px; margin: .7rem 0; color: var(--preview-primary); font-size: .65rem; font-weight: 800; text-transform: uppercase; }
+
+    [data-preview-theme="copper"] { --preview-primary:#c9793f; --preview-on-primary:#111315; --preview-dark:#111315; --preview-deep:#080a0b; --preview-page:#f7f4ee; --preview-surface:#fffdf9; --preview-muted:#e9e3da; --preview-text:#111315; --preview-muted-text:#555a58; --preview-on-dark:#fff; --preview-border:#d4cdc2; --preview-shadow:rgba(17,19,21,.14); }
+    [data-preview-theme="navy-gold"] { --preview-primary:#c6a15b; --preview-on-primary:#101a2b; --preview-dark:#101a2b; --preview-deep:#08101d; --preview-page:#f6f2e9; --preview-surface:#fffdf8; --preview-muted:#e5e9ef; --preview-text:#101a2b; --preview-muted-text:#596273; --preview-on-dark:#fff; --preview-border:#ced3da; --preview-shadow:rgba(16,26,43,.16); }
+    [data-preview-theme="forest-brass"] { --preview-primary:#bd934f; --preview-on-primary:#10251f; --preview-dark:#10251f; --preview-deep:#071510; --preview-page:#f4f1e9; --preview-surface:#fffdf8; --preview-muted:#e1e7df; --preview-text:#10251f; --preview-muted-text:#58645f; --preview-on-dark:#fff; --preview-border:#ccd4ce; --preview-shadow:rgba(16,37,31,.16); }
+    [data-preview-theme="burgundy-cream"] { --preview-primary:#b58a53; --preview-on-primary:#2a0f17; --preview-dark:#2a0f17; --preview-deep:#18070d; --preview-page:#f8f1e8; --preview-surface:#fffaf4; --preview-muted:#eadfd7; --preview-text:#2a0f17; --preview-muted-text:#6a5b5e; --preview-on-dark:#fff; --preview-border:#d9cbc5; --preview-shadow:rgba(42,15,23,.16); }
+    [data-preview-theme="slate-blue"] { --preview-primary:#6f9fba; --preview-on-primary:#17232d; --preview-dark:#17232d; --preview-deep:#0c151d; --preview-page:#f4f7f8; --preview-surface:#fff; --preview-muted:#dfe8ec; --preview-text:#17232d; --preview-muted-text:#59666e; --preview-on-dark:#fff; --preview-border:#cad5da; --preview-shadow:rgba(23,35,45,.16); }
+
+    .live-preview { margin-top: 30px; padding: clamp(24px, 4vw, 44px); background: var(--theme-dark); color: var(--theme-on-dark); border-top: 8px solid var(--theme-primary); }
+    .live-preview h2 { margin: 0; font-size: clamp(2rem, 5vw, 4rem); text-transform: uppercase; }
+    .live-preview p { color: var(--theme-muted-on-dark); }
+    .live-preview a { display: inline-flex; margin-top: 12px; padding: 13px 16px; background: var(--theme-primary); color: var(--theme-on-primary); font-weight: 800; text-decoration: none; }
+
+    @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Configurable Theme System</p>
+  <h1>Preview All Themes</h1>
+  <p class="intro">Each card below now uses its own scoped colors. Preview changes the live sample on this page. Homepage opens the real website temporarily with that theme. Remember stores the selection in this browser.</p>
+  <div class="grid" id="theme-grid"></div>
+  <section class="live-preview">
+    <p class="eyebrow">Live Theme Sample</p>
+    <h2 id="live-theme-name">Copper &amp; Charcoal</h2>
+    <p>This block changes immediately when Preview is selected. The active accent, dark surface, text colors, and button all come from the selected theme variables.</p>
+    <a id="live-home-link" href="/?theme=copper">Open Homepage With This Theme</a>
+  </section>
+</main>
+<script>
+(function () {
+  var labels = {
+    'copper': 'Copper & Charcoal',
+    'navy-gold': 'Navy & Gold',
+    'forest-brass': 'Forest & Brass',
+    'burgundy-cream': 'Burgundy & Cream',
+    'slate-blue': 'Slate & Ice Blue'
+  };
+  var colorText = {
+    'copper': '#111315 + #c9793f',
+    'navy-gold': '#101a2b + #c6a15b',
+    'forest-brass': '#10251f + #bd934f',
+    'burgundy-cream': '#2a0f17 + #b58a53',
+    'slate-blue': '#17232d + #6f9fba'
+  };
+  var grid = document.getElementById('theme-grid');
+  var liveName = document.getElementById('live-theme-name');
+  var liveLink = document.getElementById('live-home-link');
+
+  function updateActive(name) {
+    liveName.textContent = labels[name];
+    liveLink.href = '/?theme=' + encodeURIComponent(name);
+    document.querySelectorAll('.active-label').forEach(function (node) {
+      node.textContent = node.dataset.name === name ? 'Currently previewing' : '';
+    });
+  }
+
+  CHRIS_THEME.names.forEach(function (name) {
+    var card = document.createElement('article');
+    card.className = 'theme-card';
+    card.dataset.previewTheme = name;
+    card.innerHTML =
+      '<div class="swatches"><span class="swatch-dark"></span><span class="swatch-primary"></span></div>' +
+      '<div class="mini-surfaces"><span class="mini-page"></span><span class="mini-muted"></span><span class="mini-deep"></span></div>' +
+      '<h2>' + labels[name] + '</h2>' +
+      '<p class="colors">' + colorText[name] + '</p>' +
+      '<p class="active-label" data-name="' + name + '"></p>' +
+      '<div class="actions">' +
+        '<button class="preview" type="button">Preview</button>' +
+        '<a class="homepage-link" href="/?theme=' + name + '">Homepage</a>' +
+        '<button class="remember" type="button">Remember</button>' +
+      '</div>';
+
+    card.querySelector('.preview').addEventListener('click', function () {
+      CHRIS_THEME.apply(name, false);
+      updateActive(name);
+    });
+    card.querySelector('.remember').addEventListener('click', function () {
+      CHRIS_THEME.apply(name, true);
+      updateActive(name);
+    });
+    grid.appendChild(card);
+  });
+
+  updateActive(CHRIS_THEME.current());
+})();
+</script>
+</body>
+</html>

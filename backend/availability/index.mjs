@@ -5,7 +5,7 @@ const STAFF_ID = "r99f585095ff06863ec494873de9023fdf26d353f";
 const TIME_ZONE = "America/New_York";
 const DURATION_MINS = 30;
 const MAX_RANGE_DAYS = 7;
-const MAX_FUTURE_DAYS = 62;
+const MAX_FUTURE_DAYS = 30;
 const REQUEST_TIMEOUT_MS = 12000;
 const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || "https://christhebarber.denduluru.com";
 
@@ -85,7 +85,7 @@ function buildRange(startText,endText) {
   if (start<today) throw new Error("START_DATE_IS_IN_THE_PAST");
   if (range<0) throw new Error("END_DATE_PRECEDES_START_DATE");
   if (range>MAX_RANGE_DAYS) throw new Error("DATE_RANGE_EXCEEDS_7_DAYS");
-  if (daysBetween(today,end)>MAX_FUTURE_DAYS) throw new Error("END_DATE_EXCEEDS_62_DAY_LIMIT");
+  if (daysBetween(today,end)>MAX_FUTURE_DAYS) throw new Error("END_DATE_EXCEEDS_30_DAY_LIMIT");
   return {
     startISO:new Date(start.getTime()-5*3600000).toISOString(),
     endISO:new Date(end.getTime()+29*3600000-1).toISOString()

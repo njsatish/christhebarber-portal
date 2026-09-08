@@ -1,1 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://christhebarber.denduluru.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://christhebarber.denduluru.com/</loc></url>
+  <url><loc>https://christhebarber.denduluru.com/about.html</loc></url>
+  <url><loc>https://christhebarber.denduluru.com/work.html</loc></url>
+  <url><loc>https://christhebarber.denduluru.com/booking.html</loc></url>
+  <url><loc>https://christhebarber.denduluru.com/policy.html</loc></url>
+  <url><loc>https://christhebarber.denduluru.com/reviews.html</loc></url>
+  <url><loc>https://christhebarber.denduluru.com/contact.html</loc></url>
+</urlset>
